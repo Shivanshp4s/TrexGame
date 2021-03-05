@@ -42,10 +42,12 @@ function setup() {
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
   
-  ground = createSprite(200,180,400,20);
+ ground = createSprite(width/2,height,width,2);
   ground.addImage("ground",groundImage);
-  ground.x = ground.width /2;
+  ground.x = width/2
   ground.velocityX = -(6 + 3*score/100);
+  
+  gameOver = createSprite(width/2,height/2- 50);
   
   gameOver = createSprite(300,100);
   gameOver.addImage(gameOverImg);
